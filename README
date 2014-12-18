@@ -1,0 +1,29 @@
+CD GIT BRANCH THINGO
+--------------------
+
+Andrew buntine, 2014
+https://github.com/buntine
+
+WHAT?
+----
+
+This is a simple "cd" replacement that will warn you if you've just changed into a directory that:
+
+0) Is the root of a Git repository.
+1) Is not currently on the master branch.
+
+
+INSTALL
+-------
+
+0) Checkout repo
+1) Setup symlink to cd_git script so it's on your PATH:
+   $ ln -s /path/to/cd_git /usr/bin/cd_git
+2) Add the contents of cd.bash into your ~/.bashrc (or equivalent)
+3) $ source ~/.bashrc
+
+
+UNINSTALL
+---------
+
+Just remove the contents of cd.bash from your ~/.bashrc
