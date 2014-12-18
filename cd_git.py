@@ -12,7 +12,7 @@ try:
     branch = match.group(0)
 
     if not branch == "* master":
-        formatted = branch.sub("* ", "")
+        formatted = branch.replace("* ", "")
         print; print WARNING + "WARNING: NOT ON MASTER BRANCH. YOU ARE ON: " + formatted + ENDC; print
 except:
     pass
