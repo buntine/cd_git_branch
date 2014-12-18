@@ -5,5 +5,5 @@ function cd() {
       new_directory=${HOME};
   fi;
 
-  builtin cd "${new_directory}" && /home/andrew/dev/python/cd_git_branch/cd_git.py
+  builtin cd "${new_directory}" && cd_git
 }
