@@ -1,4 +1,4 @@
-function cd() {
+cd () {
   new_directory="$*";
 
   if [ $# -eq 0 ]; then 
