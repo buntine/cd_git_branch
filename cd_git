@@ -4,17 +4,22 @@ import re
 import os
 import subprocess as sub
 
-WARNING = '\033[93m'
-ENDC    = '\033[0m'
+WARNING  = '\033[93m'
+ENDC     = '\033[0m'
+BRANCHES = ["master", "development", "staging"]
 
 try:
     if os.path.exists("./.git"):
-        result = sub.check_output("git branch", stderr=sub.STDOUT, shell=True)
-        match  = re.search('\*\s\w+', result)
-        branch = match.group(0)
+        format_b = lambda b: re.sub('[ *]', '', b)
+        result   = sub.check_output("git branch", stderr=sub.STDOUT, shell=True)
+        branches = map(format_b, result.split('\n'))
+        is_hhd   = reduce(lambda b, t: t and b in branches, BRANCHES)
 
-        if not branch == "* master":
-            formatted = branch.replace("* ", "")
-            print; print WARNING + "WARNING: NOT ON MASTER BRANCH. YOU ARE ON: " + formatted + ENDC; print
+        if is_hhd:
+            match     = re.search('\*\s\w+', result)
+            branch    = match.group(0)
+            formatted = format_b(branch)
+
+            print; print WARNING + "HHD REPOSITORY!\n\nYOU ARE ON: " + formatted + ENDC; print
 except:
     pass

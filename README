@@ -5,12 +5,18 @@ Andrew buntine, 2014
 https://github.com/buntine
 
 WHAT?
-----
+-----
 
 This is a simple "cd" replacement that will warn you if you've just changed into a directory that:
 
 0) Is the root of a Git repository.
 1) Is not currently on the master branch.
+
+
+WHY?
+----
+
+Because I always fuck this up and start working in the wrong branch.
 
 
 INSTALL
