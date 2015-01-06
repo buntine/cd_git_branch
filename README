@@ -13,6 +13,12 @@ This is a simple "cd" replacement that will warn you if you've just changed into
 1) Is not currently on the master branch.
 
 
+WHY?
+----
+
+Because I always fuck this up and start working in the wrong branch.
+
+
 INSTALL
 -------
 
