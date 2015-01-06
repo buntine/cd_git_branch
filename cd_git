@@ -13,7 +13,7 @@ try:
         format_b = lambda b: re.sub('[ *]', '', b)
         result   = sub.check_output("git branch", stderr=sub.STDOUT, shell=True)
         branches = map(format_b, result.split('\n'))
-        is_hhd   = reduce(lambda b, t: t and b in branches, BRANCHES)
+        is_hhd   = reduce(lambda t, b: t and b in branches, BRANCHES)
 
         if is_hhd:
             match     = re.search('\*\s\w+', result)
