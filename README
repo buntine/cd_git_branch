@@ -25,7 +25,7 @@ INSTALL
 0) Checkout repo
 1) Setup symlink to cd_git script so it's on your PATH:
    $ ln -s /path/to/cd_git /usr/bin/cd_git
-2) Add the contents of cd.bash into your ~/.profile (or equivalent depending on OS: ~/.bashrc sometimes, etc)
+2) Add the contents of cd.bash into your ~/.profile (or equivalent depending on OS: ~/.bash_profile or ~/.bashrc sometimes, etc)
 3) Open a new terminal or $ source ~/.profile
 
 
